@@ -1,5 +1,6 @@
 package page.objects;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,9 +10,9 @@ public class HumanityStaff {
 	private static final String ADDE = "//button[@id='act_primary']";
 	private static String EMPLOYEE = "//a[contains(text(),'";
 	private static String EMPLOYEEENDING = "')]";
-	private static final String NAME = "//input[@id='_asf1']";
-	private static final String LASTNAME = "//input[@id='_asl1']";
-	private static final String EMAIL = "//input[@id='_ase1']";
+	private static final String NAME = "//input[@id='_asf";
+	private static final String LASTNAME = "//input[@id='_asl";
+	private static final String EMAIL = "//input[@id='_ase";
 	private static String ENDING= "']";
 	private static final String SAVE = "//button[@id='_as_save_multiple']";
 	
@@ -57,7 +58,7 @@ public class HumanityStaff {
 	}
 
 	public static void fillEEMAILInput(WebDriver driver, int num, String data) {
-		getEEMAILInput(driver, num).sendKeys(EMAIL);
+		getEEMAILInput(driver, num).sendKeys(data);
 	}
 
 	// da sacuva
@@ -73,8 +74,7 @@ public class HumanityStaff {
 	public static WebElement getEmployeeByName(WebDriver driver, String name) {
 		return driver.findElement(By.xpath(EMPLOYEE+name+EMPLOYEEENDING));
 	}
-	public static boolean clickEmployeeByName(WebDriver driver, String name) {
+	public static void clickEmployeeByName(WebDriver driver, String name) {
 		getEmployeeByName(driver, name).click();
-		return true;
 	}
 }

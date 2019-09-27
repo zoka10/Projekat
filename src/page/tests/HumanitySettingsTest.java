@@ -10,22 +10,22 @@ import page.objects.HumanitySettings;
 
 public class HumanitySettingsTest {
 
-	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		String url = "https://www.humanity.com/";
-		driver.get(url);
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+	public static void Settings (WebDriver driver) throws InterruptedException {
+//		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+//		WebDriver driver = new ChromeDriver();
+//		String url = "https://www.humanity.com/";
+//		driver.get(url);
+//		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+//		driver.manage().window().maximize();
 
-		// logovanje
-		Thread.sleep(3000);
-		
-		HumanityHome.clickLoginButton(driver);
-		HumanityHome.fillMailLogInput(driver, "jiseceme@mail-card.net");
-		HumanityHome.fillPasswordInput(driver, "broj123");
-		HumanityHome.clickLogButton(driver);
-		Thread.sleep(3000);
+//		// logovanje
+//		Thread.sleep(3000);
+//		
+//		HumanityHome.clickLoginButton(driver);
+//		HumanityHome.fillMailLogInput(driver, "jiseceme@mail-card.net");
+//		HumanityHome.fillPasswordInput(driver, "broj123");
+//		HumanityHome.clickLogButton(driver);
+//		Thread.sleep(3000);
 		
 		//Setovanje podataka
 		HumanitySettings.clickSettingsButton(driver);
@@ -34,7 +34,10 @@ public class HumanitySettingsTest {
 		HumanitySettings.inputTime(driver, "24 hour");
 
 		Thread.sleep(3000);
-		driver.quit();
+//		driver.quit();
 	}
 
-}
+		
+	}
+
+

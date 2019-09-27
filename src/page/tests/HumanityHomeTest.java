@@ -12,16 +12,16 @@ import page.objects.HumanityMenu;
 import rs.itbootcamp.ExcelUtils;
 
 public class HumanityHomeTest {
-	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-
-		String url = "https://www.humanity.com/";
-		driver.get(url);
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-
-		HumanityHome.clickLoginButton(driver);
+	public static void Login(WebDriver driver) {
+//		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+//		WebDriver driver = new ChromeDriver();
+//
+//		String url = "https://www.humanity.com/";
+//		driver.get(url);
+//		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+//		driver.manage().window().maximize();
+//
+//		HumanityHome.clickLoginButton(driver);
 
 		String src ="Data.xls";
 		ExcelUtils.setExcell(src);
@@ -49,7 +49,7 @@ public class HumanityHomeTest {
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}
-		driver.quit();
+//		driver.quit();
 
 	}
 	//go to website 

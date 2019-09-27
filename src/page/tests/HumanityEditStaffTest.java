@@ -10,24 +10,24 @@ import page.objects.HumanityHome;
 
 public class HumanityEditStaffTest {
 
-	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		String url = "https://www.humanity.com/";
-		driver.get(url);
-		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+	public static void Profil(WebDriver driver) throws InterruptedException {
+//		System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
+//		WebDriver driver = new ChromeDriver();
+//		String url = "https://www.humanity.com/";
+//		driver.get(url);
+//		driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
+//		driver.manage().window().maximize();
 		try {
-			// logovanje
-			Thread.sleep(3000);
-
-			HumanityHome.clickLoginButton(driver);
-			HumanityHome.fillMailLogInput(driver, "jiseceme@mail-card.net");
-			HumanityHome.fillPasswordInput(driver, "broj123");
-			HumanityHome.clickLogButton(driver);
-			Thread.sleep(3000);
-
-			// uredjivanje profila zaposlenog
+//			// logovanje
+//			Thread.sleep(3000);
+//
+//			HumanityHome.clickLoginButton(driver);
+//			HumanityHome.fillMailLogInput(driver, "jiseceme@mail-card.net");
+//			HumanityHome.fillPasswordInput(driver, "broj123");
+//			HumanityHome.clickLogButton(driver);
+//			Thread.sleep(3000);
+//
+//			// uredjivanje profila zaposlenog
 			HumanityEditStaff.clickMenuButton(driver);
 
 			Thread.sleep(3000);
@@ -43,13 +43,13 @@ public class HumanityEditStaffTest {
 			HumanityEditStaff.fillUploadInput(driver, "C:\\Dodatni (D)\\GOT.jpg");
 			Thread.sleep(3000);
 
-			System.out.println("Slika se dodala");
+			System.out.println("Slika se dodala!");
 		} catch (Exception e) {
 			System.out.println(e.toString());
-			System.out.println("Slika nije dodata");
+			System.out.println("Slika nije dodata.");
 		} finally {
 			Thread.sleep(3000);
-			driver.quit();
+//			driver.quit();
 		}
 	}
 }
